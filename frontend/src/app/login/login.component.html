@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>LMCS - Login</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class='brand'>
+  <a href='http://lmcs.esi.dz/' target='_blank'>
+    <img src='https://imgur.com/oJWxLKO.png'>
+  </a>
+</div>
+<div class='login'>
+  <div class='login_title'>
+    <span>Connectez-vous à votre compte</span>
+  </div>
+  <div class='login_fields'>
+    <div class='login_fields__user' (keyup)="onKeyUser($event)">
+      <div class='icon'>
+        <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/user_icon_copy.png'>
+      </div>
+      <input placeholder='Nom utilisateur' type='text'>
+        <div class='validation'>
+          <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/tick.png'>
+        </div>
+      
+    </div>
+    <div class='login_fields__password'>
+    
+      <div class='icon'>
+        <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/lock_icon_copy.png'>
+      </div>
+      <input  placeholder='Mot de passe' type='password' class="pass" (keyup)="onKeyPass($event)">
+      <div class='validation'>
+        <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/tick.png'>
+      </div>
+    </div>
+    <div class='login_fields__submit'>
+      <button type ="submit" mat-raised-button (click)="onSubmit()" class="submit-btn" color="#DC6180">Connexion</button>
+      <div class='forgot'>
+        <a href='#'>Mot de passe oublié?</a>
+      </div>
+      
+    </div>
+    
+  </div>
+  <div class='success'>
+    <h2>Authentification réussie</h2>
+    <p>Bienvenue</p>
+  </div>
+  <div class='disclaimer'>
+    
+  </div>
+
+
+

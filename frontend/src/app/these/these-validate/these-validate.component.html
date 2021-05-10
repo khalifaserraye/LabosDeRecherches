@@ -1,0 +1,61 @@
+<mat-toolbar class="mat-elevation-z8">
+    <button mat-icon-button  (click)="sidenav.toggle()">
+        <mat-icon *ngIf="!sidenav.opened">
+            menu
+        </mat-icon>
+        <mat-icon *ngIf="sidenav.opened">
+            close
+        </mat-icon>
+    </button>
+    Welcome {{name}}!
+</mat-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+
+        <img class="avatar mat-elevation-z8" src="https://i.ibb.co/hscDpDP/jurica-koletic-7-YVZYZe-ITc8-unsplash.jpg" />
+
+        <h4 class="name">{{name}}</h4>
+        <p class="designation">{{username}}</p>
+
+        <mat-divider></mat-divider>
+
+        <button mat-button class="menu-button" [routerLink]="['/theses']">
+            <mat-icon>home</mat-icon>
+            <span>Theses</span>
+        </button>
+
+        <button mat-button class="menu-button">
+            <mat-icon>info</mat-icon>
+            <span>About</span>
+        </button>
+
+        <mat-divider></mat-divider>
+        <button mat-button class="menu-button" [routerLink]="['/login']">
+            <mat-icon>logout</mat-icon>
+            <span>Logout</span>
+        </button>
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="content details mat-elevation-z8">
+            <h1 id="title">{{theseDetails.title}}</h1>
+            <div id="propser">Proposé par   </div>
+            <div id="propser_name">{{theseDetails.encadreur}}</div>
+            <div id="propser">Année   </div>
+            <div id="propser_name">{{theseDetails.year}}</div>
+            <div id="propser">Email promoteur   </div>
+            <div id="propser_name">{{theseDetails.emailPromoteur}}</div>
+            <div id="propser">Resume   </div>
+            <div class = "result">{{theseDetails.description}}</div>
+            <div id="propser">Objectifs  </div>
+            <div class = "result">{{theseDetails.objectif}}</div>
+            <div id="propser">Resultats attendus </div>
+            <div class = "result">{{theseDetails.results}}</div>
+            <button *ngIf="!theseDetails.validated" (click)="onValidate()" mat-raised-button class="submit-btn validate" >Valider</button>
+            <button *ngIf="!theseDetails.validated" (click)="onCancel()" mat-raised-button class="submit-btn cancel" >Annuler</button>
+            <button *ngIf="theseDetails.validated" class="submit-btn validate" mat-flat-button disabled>Validé</button>
+        </div>
+        
+    </mat-sidenav-content>
+</mat-sidenav-container>

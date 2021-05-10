@@ -1,0 +1,110 @@
+.details{
+
+    color: black;
+
+}
+#title{
+    color: rgb(56, 56, 56) !important;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    text-align: center;
+    padding: 40px 40px 10px 40px;
+}
+#propser{
+    color: rgb(22, 22, 22) !important;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: medium;
+    font-weight: bold;
+    padding: 40px 0px 10px 50px;
+    
+}
+#propser_name{
+    color: rgb(22, 22, 22) !important;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: medium;
+    font-weight: bold;
+    padding: 10px 0px 10px 40px;
+    margin-left: 20px;
+    background-color: rgb(233, 233, 233);
+    border-radius: 5px;
+    width: 60%;
+    box-shadow: .5px .5px 2px #5c5c5c;
+}
+mat-toolbar {
+    background: #003a7c;
+    color: white;
+}
+
+mat-sidenav {
+    margin: 0px;
+    width: 230px;
+    border-right: none;
+    background: #00428d;
+    color: white;
+    padding: 16px;
+    text-align: center;
+}
+
+.content {
+    background-color: #9bcaff;
+    padding-bottom: 2em;
+    border-radius: 10px;
+    margin: 16px;
+    font-size: 2rem;
+    color: lightgray;
+}
+.result{
+    color: rgb(22, 22, 22) !important;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: medium;
+    font-weight: bold;
+    padding: 10px 30px 10px 40px;
+    margin-left: 20px;
+    background-color: rgb(233, 233, 233);
+    border-radius: 5px;
+    width: 80%;
+    box-shadow: .5px .5px 2px #5c5c5c;
+}
+mat-sidenav-container {
+    height: calc(100vh - 65px);
+}
+
+.menu-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+
+    mat-icon {
+        margin-right: 8px;
+    }
+}
+
+.avatar {
+    margin-top: 16px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.name {
+    margin-top: 8px;
+    font-weight: normal;
+}
+
+.designation {
+    margin-top: 2px;
+    font-size: 0.7rem;
+    color: lightgrey;
+}
+
+mat-divider {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
